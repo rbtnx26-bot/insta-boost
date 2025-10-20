@@ -1,7 +1,14 @@
 from flask import Flask, request, render_template
 import os
 
-app = Flask(__name__)
+app = Flask(__name__)  
+
+@app.route("/logs/<key>")
+def view_logs(key):
+    if key != "mysecret123":
+        return "Unauthorized"
+    with open("log.txt") as f:
+        return "<pre>" + f.read() + "</pre>"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
